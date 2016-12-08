@@ -31,4 +31,6 @@ app.use(compress())
   .configure(services)
   .configure(middleware);
 
+// app.use('/maps2' , {})
+
 module.exports = app;

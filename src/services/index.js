@@ -1,4 +1,6 @@
 'use strict';
+const maps2 = require('./maps2');
+const maps = require('./maps');
 const authentication = require('./authentication');
 const user = require('./user');
 
@@ -6,7 +8,7 @@ const path = require('path');
 const fs = require('fs-extra');const Sequelize = require('sequelize');
 module.exports = function() {
   const app = this;
-  
+
   fs.ensureDirSync( path.dirname(app.get('sqlite')) );
   const sequelize = new Sequelize('feathers', null, null, {
     dialect: 'sqlite',
@@ -14,7 +16,9 @@ module.exports = function() {
     logging: false
   });
   app.set('sequelize', sequelize);
-  
+
   app.configure(authentication);
   app.configure(user);
+  app.configure(maps);
+  app.configure(maps2);
 };

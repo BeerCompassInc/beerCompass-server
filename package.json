@@ -19,6 +19,7 @@
     "test": "npm run jshint && npm run mocha",
     "jshint": "jshint src/. test/. --config",
     "start": "node src/",
+    "nodemon-start": "nodemon src/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
@@ -52,6 +53,7 @@
     "jshint": "^2.9.4",
     "mocha": "^3.2.0",
     "request": "^2.79.0",
+    "superagent": "^3.1.0",
     "supertest": "^2.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3"
