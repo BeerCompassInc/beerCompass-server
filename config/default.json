@@ -1,0 +1,27 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "sqlite": "../data/beercompassServer.sqlite",
+  "public": "../public/",
+  "auth": {
+    "idField": "id",
+    "token": {
+      "secret": "Rzzqf+wBHxMPseqKMjzCb9pDebaURffin6nBV9lzSn8pNEt5ilXr+FtjYwK9yPDXIrC1uDCGYsX66DlxC3wyGQ=="
+    },
+    "local": false,
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "permissions": {
+        "scope": ["public_profile","email"]
+      }
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "permissions": {
+        "scope": ["profile"]
+      }
+    }
+  }
+}
